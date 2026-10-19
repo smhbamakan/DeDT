@@ -12,7 +12,7 @@ export const meta = {
   programme: 'MSCA Postdoctoral Fellowship',
   host: 'Department of Business Management, Masaryk University, Brno, Czech Republic',
   duration: 24,
-  github: 'https://github.com/smhbamakan/DeDT',
+  github: 'https://github.com/smhbamakan/DeDT-platform',
   scholar: 'https://scholar.google.com/citations?user=YqXUN0AAAAAJ&hl=en&oi=ao',
 }
 
@@ -192,7 +192,7 @@ export const workPackages = [
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
       { id: 'D5.5', title: 'Patent application', description: 'One patent application filed through the MU Technology Transfer Office.', status: 'planned' },
-      { id: 'D5.6', title: 'Open-source software', description: 'Platform and blockchain modules released on GitHub.', status: 'planned' },
+      { id: 'D5.6', title: 'Open-source software', description: 'Platform and blockchain modules released on GitHub (MIT licence).', status: 'in-progress', links: [{ label: 'GitHub repository', url: 'https://github.com/smhbamakan/DeDT-platform' }] },
       { id: 'D5.7', title: 'Communication activities', description: 'Social media, press releases, videos and open-day talks.', status: 'in-progress' },
     ],
     milestones: [],
