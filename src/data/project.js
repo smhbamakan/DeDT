@@ -167,8 +167,8 @@ export const workPackages = [
     ],
     deliverables: [
       { id: 'D4.1', title: 'State-of-the-art review', description: 'Blockchain for trust, transparency and auditing in decentralized decision-making with digital twins.', status: 'planned' },
-      { id: 'D4.2', title: 'IBE evaluation report', description: 'Identity-based encryption for twin teams: confidentiality and efficiency vs. traditional methods.', status: 'planned' },
-      { id: 'D4.3', title: 'ZKP ownership verification', description: 'Research report and implementation proposal for privacy-preserving DT–NFT ownership proofs.', status: 'planned' },
+      { id: 'D4.2', title: 'IBE evaluation report', description: 'Identity-based encryption for twin teams: confidentiality and efficiency vs. traditional methods.', status: 'in-progress', summary: 'Prototype: Boneh–Franklin IBE whose master key is shared among t-of-n key servers by distributed key generation (no central key centre), benchmarked against ECIES on secp256k1.', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp4-trust-auditing' }] },
+      { id: 'D4.3', title: 'ZKP ownership verification', description: 'Research report and implementation proposal for privacy-preserving DT–NFT ownership proofs.', status: 'in-progress', summary: 'Prototype: a commitment to the birth certificate is stored on the twin NFT; the holder proves it in zero knowledge with selective disclosure, verified on-chain (≈ 135k gas, no trusted setup), and rotates it after a sale.', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp4-trust-auditing' }] },
     ],
     milestones: [
       { id: 'M4.1', title: 'State-of-the-art review on blockchain for trust', month: 20 },
@@ -261,5 +261,5 @@ export const codeModules = [
   { wp: 3, folder: 'wp3-ip-nft-fundraising', title: 'IP-NFTs & fundraising', tech: 'Solidity · Hardhat', status: 'available', text: 'IP-NFT registry with birth certificate and provenance trail, NFT-backed crowdfunding and IP share tokens.' },
   { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO workspace + L3 collaboration', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'A DAO for twin teams (reputation voting, timelock, parallel tasks, experiments, reports) and the AEI 2025 cross-chain framework (validator-quorum gateway, shared dNFTs, HTLC swaps).' },
   { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python · Solidity', status: 'available', text: 'Twin sensor-stream simulation, edge processing with anomaly detection, and Merkle batches anchored on-chain for tamper-evident data flows.' },
-  { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'planned', text: 'Identity-based encryption, self-judgment data authentication and ZKP ownership proofs.' },
+  { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'available', text: 'Identity-based encryption with distributed key servers, self-judging data authentication with aggregated BLS signatures, and zero-knowledge proofs linking a twin NFT to its birth certificate, all verified on the EVM.' },
 ]
