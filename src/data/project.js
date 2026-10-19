@@ -82,7 +82,7 @@ export const workPackages = [
     ],
     deliverables: [
       { id: 'D1.1', title: 'Requirement analysis report', description: 'Key challenges and needs for a distributed collaboration platform in digital twin development.', status: 'planned' },
-      { id: 'D1.2', title: 'DAO platform', description: 'A Decentralized Autonomous Organization providing a virtual workspace for twin teams.', status: 'planned' },
+      { id: 'D1.2', title: 'DAO platform', description: 'A Decentralized Autonomous Organization providing a virtual workspace for twin teams.', status: 'in-progress', summary: 'Prototype: members vote with earned, non-transferable reputation; decisions run through a timelock. The workspace holds projects, parallel funded tasks, computational experiments with peer endorsements, and bonded misbehaviour reports ruled by vote (51 tests).', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp1-dao-collaboration/contracts/dao' }] },
       { id: 'D1.3', title: 'Data-sharing platform', description: 'A secure, accessible platform for collaboration and information exchange.', status: 'in-progress', summary: 'Prototype of the L3 framework from the AEI 2025 paper: twin teams on different blockchains share a twin as a dynamic NFT through a decentralized validator-quorum bridge, with atomic swaps (26 tests).', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp1-dao-collaboration' }, { label: 'Paper', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
     ],
     milestones: [
@@ -259,7 +259,7 @@ export const team = [
 // status: 'planned' | 'in-progress' | 'available'
 export const codeModules = [
   { wp: 3, folder: 'wp3-ip-nft-fundraising', title: 'IP-NFTs & fundraising', tech: 'Solidity · Hardhat', status: 'available', text: 'IP-NFT registry with birth certificate and provenance trail, NFT-backed crowdfunding and IP share tokens.' },
-  { wp: 1, folder: 'wp1-dao-collaboration', title: 'L3 collaboration across blockchains', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'Implementation of the AEI 2025 framework: cross-chain gateway with a validator quorum, twin dNFTs shared between chains, and HTLC atomic swaps.' },
+  { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO workspace + L3 collaboration', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'A DAO for twin teams (reputation voting, timelock, parallel tasks, experiments, reports) and the AEI 2025 cross-chain framework (validator-quorum gateway, shared dNFTs, HTLC swaps).' },
   { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python', status: 'planned', text: 'Sensor stream simulation, edge aggregation and Merkle anchoring of data on-chain.' },
   { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'planned', text: 'Identity-based encryption, self-judgment data authentication and ZKP ownership proofs.' },
 ]
