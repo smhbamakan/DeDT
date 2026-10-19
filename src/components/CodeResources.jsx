@@ -23,7 +23,7 @@ const RESOURCES = [
     icon: FiGlobe,
     title: 'Project Website',
     description: 'The official DeDT research project website with updates, announcements, and results.',
-    link: 'https://smhbamakan.github.io/DeDT.github.io/',
+    link: 'https://smhbamakan.github.io/DeDT/',
     linkLabel: 'Visit Site',
     accent: '#06B6D4',
   },

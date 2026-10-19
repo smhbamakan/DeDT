@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --repo https://github.com/smhbamakan/DeDT.github.io.git"
+    "deploy": "gh-pages -d dist --repo https://github.com/smhbamakan/DeDT.git"
   },
   "dependencies": {
     "framer-motion": "^11.3.31",
