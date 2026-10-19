@@ -46,21 +46,30 @@ export default function Timeline() {
                     className={`absolute inset-y-0 rounded-md ${isMain ? 'bg-brand/85' : 'bg-slate-300'}`}
                     style={{ left: `${pct(start)}%`, width: `${((end - start + 1) / total) * 100}%` }}
                   />
-                  {(wp.milestones ?? []).map((m) => (
-                    <span
-                      key={m.id}
-                      title={`${m.id}: ${m.title} (M${m.month})`}
-                      className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-amber-400 border border-white"
-                      style={{ left: `${pct(m.month) + 100 / total / 2}%` }}
-                    />
-                  ))}
+                  {(wp.milestones ?? []).map((m) => {
+                    const reached = m.status === 'reached'
+                    return (
+                      <span
+                        key={m.id}
+                        title={`${m.id}: ${m.title} (M${m.month})${reached ? ' — reached' : ''}`}
+                        className={`absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rotate-45 ${reached ? 'bg-amber-400 border border-white' : 'bg-white border-2 border-amber-400'}`}
+                        style={{ left: `${pct(m.month) + 100 / total / 2}%` }}
+                      />
+                    )
+                  })}
                 </div>
               </li>
             )
           })}
         </ul>
-        <p className="mt-4 text-xs text-ink-muted flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 rotate-45 bg-amber-400" /> Milestone (hover for details)
+        <p className="mt-4 text-xs text-ink-muted flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block w-2.5 h-2.5 rotate-45 bg-amber-400" /> Milestone reached
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block w-2.5 h-2.5 rotate-45 bg-white border-2 border-amber-400" /> Milestone planned
+          </span>
+          <span>(hover for details)</span>
         </p>
       </motion.div>
     </Section>

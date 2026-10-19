@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiArrowLeft, FiArrowRight, FiFlag, FiGithub } from 'react-icons/fi'
+import { FiArrowLeft, FiArrowRight, FiCheckCircle, FiFlag, FiGithub } from 'react-icons/fi'
 import DeliverableCard from '../components/wp/DeliverableCard.jsx'
 import PublicationCard from '../components/ui/PublicationCard.jsx'
 import { goToSection } from '../hooks/useHashRoute.js'
@@ -96,15 +96,20 @@ export default function WorkPackagePage({ wp }) {
             <div>
               <h2 className="text-2xl font-bold text-ink mb-4">Milestones</h2>
               <ul className="space-y-3">
-                {wp.milestones.map((m) => (
-                  <li key={m.id} className="flex gap-3">
-                    <FiFlag className="mt-1 text-amber-500 shrink-0" />
-                    <span className="text-ink-soft">
-                      <span className="font-semibold text-ink">{m.id}</span> · {m.title}{' '}
-                      <span className="text-ink-muted text-sm">(M{m.month})</span>
-                    </span>
-                  </li>
-                ))}
+                {wp.milestones.map((m) => {
+                  const reached = m.status === 'reached'
+                  return (
+                    <li key={m.id} className="flex gap-3">
+                      {reached ? <FiCheckCircle className="mt-1 text-accent shrink-0" /> : <FiFlag className="mt-1 text-amber-500 shrink-0" />}
+                      <span className="text-ink-soft">
+                        <span className="font-semibold text-ink">{m.id}</span> · {m.title}{' '}
+                        <span className="text-ink-muted text-sm">(M{m.month})</span>
+                        {reached && <span className="ml-2 inline-flex px-2 py-0.5 rounded-full text-xs font-semibold bg-accent-light text-accent">Reached</span>}
+                        {m.note && <span className="block text-sm text-ink-muted mt-0.5">{m.note}</span>}
+                      </span>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           )}
