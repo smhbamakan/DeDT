@@ -192,7 +192,7 @@ export const workPackages = [
       'Communication: social media, press releases, videos, open-day talks',
     ],
     deliverables: [
-      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress' },
+      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: Advanced Engineering Informatics (2025), collaboration methods for digital twin teams on heterogeneous blockchains.', links: [{ label: 'Read the article', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
       { id: 'D5.2', title: 'Industry webinars', description: 'Online webinars for industrial partners (80–130 attendees).', status: 'planned' },
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
@@ -212,14 +212,17 @@ export const supportPackages = [
 
 export const publications = [
   {
-    title: 'DeDTs: A Decentralized Digital Twins Platform Based on Blockchain Technology and Web3',
-    authors: 'Seyed Mojtaba Hosseini Bamakan, et al.',
-    venue: 'Blockchain: Research and Applications (Elsevier)',
-    year: '2026',
+    title: 'Analyzing potential collaboration methods for digital twin teams developed on heterogeneous blockchains without a central authority',
+    authors: 'Saeed Banaeian Far, Seyed Mojtaba Hosseini Bamakan',
+    venue: 'Advanced Engineering Informatics (Elsevier), vol. 68, 103616',
+    year: '2025',
     type: 'Journal article',
-    url: 'https://www.sciencedirect.com/science/article/pii/S2772918424000304',
+    featured: true,
+    doi: '10.1016/j.aei.2025.103616',
+    url: 'https://www.sciencedirect.com/science/article/pii/S1474034625005099',
+    wps: [1],
     abstract:
-      'Proposes a decentralized digital twin platform powered by blockchain and Web3, addressing data integrity, IP protection, decentralized fundraising via IP-NFTs, and trustworthy collaborative analytics.',
+      'Studies how digital twin teams built on different, heterogeneous blockchains can collaborate without a central authority, and analyzes the possible collaboration methods for decentralized digital twin projects.',
   },
 ]
 
