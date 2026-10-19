@@ -31,6 +31,7 @@ export const challenges = [
   'Fundraising for DT projects',
   'Distributed collaboration',
   'Security & privacy',
+  'Interoperability across blockchains',
 ]
 
 export const objectives = [
@@ -71,7 +72,7 @@ export const workPackages = [
     problem:
       'Designing a digital twin needs experts from many domains, each covering only part of the system. They need an accessible, reliable and secure place to share data and work together.',
     solution:
-      'A Decentralized Autonomous Organization (DAO) that gives twin teams a common virtual workspace, managed by the teams themselves with no central authority.',
+      'A Decentralized Autonomous Organization (DAO) that gives twin teams a common virtual workspace, managed by the teams themselves with no central authority. Teams on different blockchains are connected through a decentralized Layer-3 bridge.',
     techniques:
       'Software engineering of the DAO platform, using DAO capabilities such as parallel intelligence, computational experiments and parallel execution.',
     tasks: [
@@ -82,7 +83,7 @@ export const workPackages = [
     deliverables: [
       { id: 'D1.1', title: 'Requirement analysis report', description: 'Key challenges and needs for a distributed collaboration platform in digital twin development.', status: 'planned' },
       { id: 'D1.2', title: 'DAO platform', description: 'A Decentralized Autonomous Organization providing a virtual workspace for twin teams.', status: 'planned' },
-      { id: 'D1.3', title: 'Data-sharing platform', description: 'A secure, accessible platform for collaboration and information exchange.', status: 'planned' },
+      { id: 'D1.3', title: 'Data-sharing platform', description: 'A secure, accessible platform for collaboration and information exchange.', status: 'in-progress', summary: 'Prototype of the L3 framework from the AEI 2025 paper: twin teams on different blockchains share a twin as a dynamic NFT through a decentralized validator-quorum bridge, with atomic swaps (26 tests).', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp1-dao-collaboration' }, { label: 'Paper', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
     ],
     milestones: [
       { id: 'M1.1', title: 'Protocol and standards review completed', month: 3 },
@@ -192,7 +193,7 @@ export const workPackages = [
       'Communication: social media, press releases, videos, open-day talks',
     ],
     deliverables: [
-      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: Advanced Engineering Informatics (2025), collaboration methods for digital twin teams on heterogeneous blockchains.', links: [{ label: 'Read the article', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
+      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: Advanced Engineering Informatics (2025), a Layer-3 framework for collaboration of digital twin teams on heterogeneous blockchains.', links: [{ label: 'Read the article', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
       { id: 'D5.2', title: 'Industry webinars', description: 'Online webinars for industrial partners (80–130 attendees).', status: 'planned' },
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
@@ -216,13 +217,21 @@ export const publications = [
     authors: 'Saeed Banaeian Far, Seyed Mojtaba Hosseini Bamakan',
     venue: 'Advanced Engineering Informatics (Elsevier), vol. 68, 103616',
     year: '2025',
-    type: 'Journal article',
+    date: 'Published online 15 July 2025',
+    type: 'Review article',
     featured: true,
     doi: '10.1016/j.aei.2025.103616',
     url: 'https://www.sciencedirect.com/science/article/pii/S1474034625005099',
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp1-dao-collaboration',
     wps: [1],
     abstract:
-      'Studies how digital twin teams built on different, heterogeneous blockchains can collaborate without a central authority, and analyzes the possible collaboration methods for decentralized digital twin projects.',
+      'Digital twin teams increasingly build their projects on different blockchains, but sharing data between them still relies on centralized intermediaries. The study identifies the main data-transfer methods between heterogeneous blockchains (cross-chain, para-chain, side-chain and super-chain) and proposes a modular Layer-3 (L3) framework that lets twin teams collaborate without any central authority. It analyses each method inside the framework, with implementation guidelines, cryptographic security considerations and key challenges, in the setting of shared, metaverse-based virtual labs.',
+    highlights: [
+      { value: '62%', label: 'lower latency with L3 configurations' },
+      { value: '4–6×', label: 'better transaction cost than L1-to-L1 protocols' },
+      { value: '4', label: 'L3 mechanisms analysed in one generic framework' },
+    ],
+    keywords: ['Cross-chain', 'Interoperability', 'Layer 3', 'Metaverse', 'Scalability', 'Virtual lab'],
   },
 ]
 
@@ -250,7 +259,7 @@ export const team = [
 // status: 'planned' | 'in-progress' | 'available'
 export const codeModules = [
   { wp: 3, folder: 'wp3-ip-nft-fundraising', title: 'IP-NFTs & fundraising', tech: 'Solidity · Hardhat', status: 'available', text: 'IP-NFT registry with birth certificate and provenance trail, NFT-backed crowdfunding and IP share tokens.' },
-  { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO for twin teams', tech: 'Solidity · Hardhat', status: 'planned', text: 'Proposals, voting and data-sharing access control for collaborating twin teams.' },
+  { wp: 1, folder: 'wp1-dao-collaboration', title: 'L3 collaboration across blockchains', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'Implementation of the AEI 2025 framework: cross-chain gateway with a validator quorum, twin dNFTs shared between chains, and HTLC atomic swaps.' },
   { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python', status: 'planned', text: 'Sensor stream simulation, edge aggregation and Merkle anchoring of data on-chain.' },
   { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'planned', text: 'Identity-based encryption, self-judgment data authentication and ZKP ownership proofs.' },
 ]

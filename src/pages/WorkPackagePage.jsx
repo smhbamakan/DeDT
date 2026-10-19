@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion'
 import { FiArrowLeft, FiArrowRight, FiFlag, FiGithub } from 'react-icons/fi'
 import DeliverableCard from '../components/wp/DeliverableCard.jsx'
+import PublicationCard from '../components/ui/PublicationCard.jsx'
 import { goToSection } from '../hooks/useHashRoute.js'
-import { workPackages, objectives } from '../data/project.js'
+import { workPackages, objectives, publications } from '../data/project.js'
 
 export default function WorkPackagePage({ wp }) {
   const idx = workPackages.indexOf(wp)
   const prev = workPackages[idx - 1]
   const next = workPackages[idx + 1]
   const objs = objectives.filter((o) => wp.objectives.includes(o.id))
+  const outputs = publications.filter((p) => p.wps?.includes(wp.n))
 
   return (
     <motion.div key={wp.n} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
@@ -64,6 +66,18 @@ export default function WorkPackagePage({ wp }) {
             ))}
           </div>
         </section>
+
+        {/* Publications from this work package */}
+        {outputs.length > 0 && (
+          <section>
+            <h2 className="text-2xl font-bold text-ink mb-5">Publications</h2>
+            <div className="space-y-5">
+              {outputs.map((p) => (
+                <PublicationCard key={p.title} p={p} showWps={false} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Tasks & milestones */}
         <section className="grid lg:grid-cols-[3fr_2fr] gap-8">
