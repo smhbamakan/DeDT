@@ -1,48 +1,24 @@
-import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import About from './components/About.jsx'
-import Objectives from './components/Objectives.jsx'
-import Challenges from './components/Challenges.jsx'
-import Framework from './components/Framework.jsx'
-import Publications from './components/Publications.jsx'
-import CodeResources from './components/CodeResources.jsx'
-import Team from './components/Team.jsx'
-import Contact from './components/Contact.jsx'
+import { useEffect } from 'react'
+import Navbar from './components/layout/Navbar.jsx'
+import Footer from './components/layout/Footer.jsx'
+import HomePage from './pages/HomePage.jsx'
+import WorkPackagePage from './pages/WorkPackagePage.jsx'
+import { useHashRoute } from './hooks/useHashRoute.js'
+import { workPackages } from './data/project.js'
 
 export default function App() {
+  const route = useHashRoute()
+  const wp = route.page === 'wp' ? workPackages.find((w) => w.n === route.n) : null
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [route.page, route.n])
+
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
-      <main>
-        <Hero />
-        <div className="section-divider" />
-        <About />
-        <div className="section-divider" />
-        <Objectives />
-        <div className="section-divider" />
-        <Challenges />
-        <div className="section-divider" />
-        <Framework />
-        <div className="section-divider" />
-        <Publications />
-        <div className="section-divider" />
-        <CodeResources />
-        <div className="section-divider" />
-        <Team />
-        <div className="section-divider" />
-        <Contact />
-      </main>
-      <footer className="text-center py-8 px-4 text-slate-600 text-sm border-t border-slate-800/50">
-        <p>
-          DeDT Research Project &copy; 2024&ndash;2026 &middot;{' '}
-          <span className="text-slate-500">Masaryk University, Czech Republic</span>
-          {' '}&middot;{' '}
-          <span className="text-slate-500">Dr. Seyed Mojtaba Hosseini Bamakan</span>
-        </p>
-        <p className="mt-1 text-slate-700">
-          Funded under the Marie Skłodowska-Curie Actions (MSCA) Fellowship Programme
-        </p>
-      </footer>
+      <main className="flex-1">{wp ? <WorkPackagePage wp={wp} /> : <HomePage />}</main>
+      <Footer />
     </div>
   )
 }
