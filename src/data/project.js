@@ -109,9 +109,9 @@ export const workPackages = [
       'T2.4 Develop solutions for data flow management',
     ],
     deliverables: [
-      { id: 'D2.1', title: 'Blockchain applicability report', description: 'How blockchain ensures data integrity and security in digital twin environments.', status: 'planned' },
-      { id: 'D2.2', title: 'Data flow management methods', description: 'Methodologies and algorithms addressing volume, velocity and variety.', status: 'planned' },
-      { id: 'D2.3', title: 'Performance evaluation report', description: 'Performance analysis of the developed data flow management solutions.', status: 'planned' },
+      { id: 'D2.1', title: 'Blockchain applicability report', description: 'How blockchain ensures data integrity and security in digital twin environments.', status: 'planned', summary: 'Technical basis available: Merkle anchoring detected 100% of 250 tampering attempts at 342 gas per reading.' },
+      { id: 'D2.2', title: 'Data flow management methods', description: 'Methodologies and algorithms addressing volume, velocity and variety.', status: 'in-progress', summary: 'Prototype: edge reordering with watermarks, streaming statistics, online anomaly detection, and Merkle batches anchored on-chain in a hash chain (38 tests).', links: [{ label: 'Code on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp2-big-data-flows' }] },
+      { id: 'D2.3', title: 'Performance evaluation report', description: 'Performance analysis of the developed data flow management solutions.', status: 'in-progress', summary: 'First results on a simulated robot-arm twin: data reduction ×158, anomaly detection F1 0.87, at least 4× processing headroom at 48 sensors.', links: [{ label: 'Results and figures', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp2-big-data-flows#-results' }] },
     ],
     milestones: [
       { id: 'M2.1', title: 'Blockchain applicability & DT big data properties', month: 11 },
@@ -260,6 +260,6 @@ export const team = [
 export const codeModules = [
   { wp: 3, folder: 'wp3-ip-nft-fundraising', title: 'IP-NFTs & fundraising', tech: 'Solidity · Hardhat', status: 'available', text: 'IP-NFT registry with birth certificate and provenance trail, NFT-backed crowdfunding and IP share tokens.' },
   { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO workspace + L3 collaboration', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'A DAO for twin teams (reputation voting, timelock, parallel tasks, experiments, reports) and the AEI 2025 cross-chain framework (validator-quorum gateway, shared dNFTs, HTLC swaps).' },
-  { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python', status: 'planned', text: 'Sensor stream simulation, edge aggregation and Merkle anchoring of data on-chain.' },
+  { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python · Solidity', status: 'available', text: 'Twin sensor-stream simulation, edge processing with anomaly detection, and Merkle batches anchored on-chain for tamper-evident data flows.' },
   { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'planned', text: 'Identity-based encryption, self-judgment data authentication and ZKP ownership proofs.' },
 ]
