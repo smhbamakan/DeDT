@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiGithub } from 'react-icons/fi'
 import { meta } from '../../data/project.js'
 import { goToSection } from '../../hooks/useHashRoute.js'
 
@@ -17,7 +17,9 @@ export default function Hero() {
             <button onClick={() => goToSection('work-packages')} className="btn-primary">
               Explore Work Packages <FiArrowRight />
             </button>
-            <button onClick={() => goToSection('about')} className="btn-outline">About the project</button>
+            <a href={meta.github} target="_blank" rel="noreferrer" className="btn-outline bg-white">
+              <FiGithub /> Open-source code
+            </a>
           </div>
           <dl className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             {[

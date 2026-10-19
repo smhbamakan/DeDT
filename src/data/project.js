@@ -63,6 +63,7 @@ export const objectives = [
 export const workPackages = [
   {
     n: 1,
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp1-dao-collaboration',
     title: 'Distributed Collaboration Platform',
     short: 'A DAO-based shared workspace run by the twin teams themselves.',
     objectives: ['O1', 'O2'],
@@ -90,6 +91,7 @@ export const workPackages = [
   },
   {
     n: 2,
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp2-big-data-flows',
     title: 'Digital Twin Big Data Flows',
     short: 'Managing the volume, velocity and variety of sensor data, with integrity guaranteed by blockchain.',
     objectives: ['O2'],
@@ -117,6 +119,7 @@ export const workPackages = [
   },
   {
     n: 3,
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp3-ip-nft-fundraising',
     title: 'Fundraising for Twin Teams',
     short: 'NFTs as a new and reliable way to fund digital twin projects.',
     objectives: ['O3'],
@@ -133,7 +136,7 @@ export const workPackages = [
     ],
     deliverables: [
       { id: 'D3.1', title: 'Financial requirements report', description: 'Financial needs of twin teams in collaborative projects.', status: 'planned' },
-      { id: 'D3.2', title: 'NFT funding model', description: 'NFT-funding model implemented in the DT ecosystem, enabling permissionless innovation and community support.', status: 'planned' },
+      { id: 'D3.2', title: 'NFT funding model', description: 'NFT-funding model implemented in the DT ecosystem, enabling permissionless innovation and community support.', status: 'in-progress', summary: 'Prototype smart contracts: IP-NFT registry with birth certificate and provenance trail, all-or-nothing crowdfunding that escrows the IP-NFT, and ERC-20 IP shares for backers (16 tests).', links: [{ label: 'Smart contracts on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp3-ip-nft-fundraising' }] },
       { id: 'D3.3', title: 'Pilot experiment report', description: 'Viability and effectiveness of NFT-powered funding.', status: 'planned' },
     ],
     milestones: [
@@ -143,6 +146,7 @@ export const workPackages = [
   },
   {
     n: 4,
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp4-trust-auditing',
     title: 'Trust & Auditing in Predictive Analytics',
     short: 'Cryptography that makes predictions and ownership verifiable, without revealing secrets.',
     objectives: ['O4'],
@@ -173,6 +177,7 @@ export const workPackages = [
   },
   {
     n: 5,
+    code: 'https://github.com/smhbamakan/DeDT-platform',
     title: 'Dissemination & Communication',
     short: 'Sharing results with researchers, industry, policy makers and the public.',
     objectives: ['O1', 'O2', 'O3', 'O4'],
@@ -236,4 +241,13 @@ export const team = [
     interests: ['Business Analytics', 'Big Data', 'Blockchain', 'Information Systems'],
     links: [],
   },
+]
+
+// Open-source modules in github.com/smhbamakan/DeDT-platform (shown in the "Source code" section).
+// status: 'planned' | 'in-progress' | 'available'
+export const codeModules = [
+  { wp: 3, folder: 'wp3-ip-nft-fundraising', title: 'IP-NFTs & fundraising', tech: 'Solidity · Hardhat', status: 'available', text: 'IP-NFT registry with birth certificate and provenance trail, NFT-backed crowdfunding and IP share tokens.' },
+  { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO for twin teams', tech: 'Solidity · Hardhat', status: 'planned', text: 'Proposals, voting and data-sharing access control for collaborating twin teams.' },
+  { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python', status: 'planned', text: 'Sensor stream simulation, edge aggregation and Merkle anchoring of data on-chain.' },
+  { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'planned', text: 'Identity-based encryption, self-judgment data authentication and ZKP ownership proofs.' },
 ]

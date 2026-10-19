@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiArrowLeft, FiArrowRight, FiFlag } from 'react-icons/fi'
+import { FiArrowLeft, FiArrowRight, FiFlag, FiGithub } from 'react-icons/fi'
 import DeliverableCard from '../components/wp/DeliverableCard.jsx'
 import { goToSection } from '../hooks/useHashRoute.js'
 import { workPackages, objectives } from '../data/project.js'
@@ -30,6 +30,11 @@ export default function WorkPackagePage({ wp }) {
               </li>
             ))}
           </ul>
+          {wp.code && (
+            <a href={wp.code} target="_blank" rel="noreferrer" className="btn-primary mt-6">
+              <FiGithub /> View code on GitHub
+            </a>
+          )}
         </div>
       </section>
 
