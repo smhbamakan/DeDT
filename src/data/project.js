@@ -137,7 +137,7 @@ export const workPackages = [
     ],
     deliverables: [
       { id: 'D3.1', title: 'Financial requirements report', description: 'Financial needs of twin teams in collaborative projects.', status: 'planned' },
-      { id: 'D3.2', title: 'NFT funding model', description: 'NFT-funding model implemented in the DT ecosystem, enabling permissionless innovation and community support.', status: 'in-progress', summary: 'Prototype smart contracts: IP-NFT registry with birth certificate and provenance trail, all-or-nothing crowdfunding that escrows the IP-NFT, and ERC-20 IP shares for backers (16 tests).', links: [{ label: 'Smart contracts on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp3-ip-nft-fundraising' }] },
+      { id: 'D3.2', title: 'NFT funding model', description: 'NFT-funding model implemented in the DT ecosystem, enabling permissionless innovation and community support.', status: 'in-progress', summary: 'Prototype smart contracts: IP-NFT registry with birth certificate and provenance trail, all-or-nothing crowdfunding that escrows the IP-NFT, and ERC-20 IP shares for backers (16 tests).', links: [{ label: 'Smart contracts on GitHub', url: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp3-ip-nft-fundraising' }, { label: 'Registered IP-NFT (Etherscan)', url: 'https://etherscan.io/nft/0x0bDB2c4a4ECcE150bBB930833D8ce17d22d81bab/1' }] },
       { id: 'D3.3', title: 'Pilot experiment report', description: 'Viability and effectiveness of NFT-powered funding.', status: 'planned' },
     ],
     milestones: [
@@ -197,7 +197,7 @@ export const workPackages = [
       { id: 'D5.2', title: 'Industry webinars', description: 'Online webinars for industrial partners (80–130 attendees).', status: 'planned' },
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
-      { id: 'D5.5', title: 'Patent application', description: 'One patent application filed through the MU Technology Transfer Office.', status: 'planned' },
+      { id: 'D5.5', title: 'IP protection (IP-NFT)', description: 'Technical disclosure published with a DOI as a defensive publication and registered as an IP-NFT on Ethereum, in place of a conventional patent filing.', status: 'available', summary: 'Published on Zenodo (9 November 2026) and registered as IP-NFT token #1 on Ethereum mainnet; the token records the DOI and the SHA-256 digest of the published document.', links: [{ label: 'Zenodo record', url: 'https://doi.org/10.5281/zenodo.24075040' }, { label: 'IP-NFT on Etherscan', url: 'https://etherscan.io/nft/0x0bDB2c4a4ECcE150bBB930833D8ce17d22d81bab/1' }] },
       { id: 'D5.6', title: 'Open-source software', description: 'Platform and blockchain modules released on GitHub (MIT licence).', status: 'in-progress', links: [{ label: 'GitHub repository', url: 'https://github.com/smhbamakan/DeDT-platform' }] },
       { id: 'D5.7', title: 'Communication activities', description: 'Social media, press releases, videos and open-day talks.', status: 'in-progress' },
     ],
@@ -212,6 +212,27 @@ export const supportPackages = [
 ]
 
 export const publications = [
+  {
+    title: 'Zero-Knowledge-Verified Provenance, Ownership and Access Control for Digital Twins Bound to Non-Fungible Tokens',
+    authors: 'Seyed Mojtaba Hosseini Bamakan, Ahad Zareravasan',
+    venue: 'Defensive publication (technical disclosure), Zenodo',
+    year: '2026',
+    date: 'Published 9 November 2026 · registered as IP-NFT on Ethereum mainnet (token #1)',
+    type: 'Technical disclosure · IP-NFT',
+    featured: true,
+    doi: '10.5281/zenodo.24075040',
+    url: 'https://doi.org/10.5281/zenodo.24075040',
+    urlLabel: 'Read on Zenodo',
+    links: [
+      { label: 'IP-NFT on Etherscan', url: 'https://etherscan.io/nft/0x0bDB2c4a4ECcE150bBB930833D8ce17d22d81bab/1' },
+      { label: 'Document on IPFS', url: 'https://ipfs.io/ipfs/bafybeib3y75yabu5jmt75fn2qlsd7ehyhuhlzikbr5kgczy4bfub4kcd6y' },
+    ],
+    code: 'https://github.com/smhbamakan/DeDT-platform/tree/main/wp3-ip-nft-fundraising',
+    wps: [3, 4],
+    abstract:
+      'A non-fungible token stores only a commitment to the state of a digital twin. The ledger accepts a new state only when a zero-knowledge proof shows that it follows from the stored one through an authorized, physically plausible transition. The disclosure also covers holder-bound ownership proofs, federated-learning lineage committed in the same state tree, and identity-based encryption keys tied to the token and issued by threshold key servers. The document itself is registered as an IP-NFT whose on-chain record holds its DOI and SHA-256 digest.',
+    keywords: ['Digital twin', 'IP-NFT', 'Zero-knowledge proof', 'Provenance', 'Federated learning', 'Identity-based encryption'],
+  },
   {
     title: 'Analyzing potential collaboration methods for digital twin teams developed on heterogeneous blockchains without a central authority',
     authors: 'Saeed Banaeian Far, Seyed Mojtaba Hosseini Bamakan',

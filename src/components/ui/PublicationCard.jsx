@@ -51,9 +51,14 @@ export default function PublicationCard({ p, showWps = true }) {
       <p className="mt-5 flex flex-wrap gap-3">
         {p.url && (
           <a href={p.url} target="_blank" rel="noreferrer" className="btn-outline text-sm">
-            Read the article <FiExternalLink />
+            {p.urlLabel ?? 'Read the article'} <FiExternalLink />
           </a>
         )}
+        {p.links?.map((l) => (
+          <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="btn-outline text-sm">
+            {l.label} <FiExternalLink />
+          </a>
+        ))}
         {p.code && (
           <a href={p.code} target="_blank" rel="noreferrer" className="btn-outline text-sm">
             <FiGithub /> Implementation
