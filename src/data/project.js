@@ -349,4 +349,13 @@ export const outreach = [
     tags: ['D5.7', 'T6.3'],
     links: [{ label: 'Read the interview', url: 'https://www.econ.muni.cz/en/news/digital-twins-bridging-the-physical-and-digital-worlds' }],
   },
+  {
+    title: 'A Decentralized and Trustworthy Digital Twin Platform Powered by Blockchain and Web3',
+    type: 'Seminar talk',
+    channel: 'Department of Business Management, ECON MUNI',
+    date: '23 April 2025',
+    text: 'An internal seminar presenting the conceptual foundations, research objectives and technical roadmap of the project to colleagues and researchers of the department. It ended with an open Q&A in which participants gave feedback and raised questions on the scalability of blockchain-based digital twins.',
+    tags: ['D5.7', 'T6.3'],
+    links: [],
+  },
 ]
