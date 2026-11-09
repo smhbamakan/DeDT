@@ -10,6 +10,7 @@ const LINKS = [
   ['timeline', 'Timeline'],
   ['code', 'Open Source'],
   ['publications', 'Publications'],
+  ['outreach', 'Outreach'],
   ['team', 'Team'],
   ['contact', 'Contact'],
 ]

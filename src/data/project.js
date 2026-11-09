@@ -199,7 +199,7 @@ export const workPackages = [
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
       { id: 'D5.5', title: 'IP protection (IP-NFT)', description: 'Technical disclosure published with a DOI as a defensive publication and registered as an IP-NFT on Ethereum, in place of a conventional patent filing.', status: 'available', summary: 'Published on Zenodo (9 November 2026) and registered as IP-NFT token #1 on Ethereum mainnet; the token records the DOI and the SHA-256 digest of the published document.', links: [{ label: 'Zenodo record', url: 'https://doi.org/10.5281/zenodo.24075040' }, { label: 'IP-NFT on Etherscan', url: 'https://etherscan.io/nft/0x0bDB2c4a4ECcE150bBB930833D8ce17d22d81bab/1' }] },
       { id: 'D5.6', title: 'Open-source software', description: 'Platform and blockchain modules released on GitHub (MIT licence).', status: 'in-progress', links: [{ label: 'GitHub repository', url: 'https://github.com/smhbamakan/DeDT-platform' }] },
-      { id: 'D5.7', title: 'Communication activities', description: 'Social media, press releases, videos and open-day talks.', status: 'in-progress' },
+      { id: 'D5.7', title: 'Communication activities', description: 'Social media, press releases, videos and open-day talks.', status: 'in-progress', summary: 'Faculty news interview (April 2026) and the #askaneconomist video interview on the faculty social-media channels (August 2026), both explaining digital twins to a general audience.', links: [{ label: 'Faculty interview', url: 'https://www.econ.muni.cz/en/news/digital-twins-bridging-the-physical-and-digital-worlds' }, { label: 'Video on LinkedIn', url: 'https://www.linkedin.com/posts/askaneconomist-ugcPost-7494032637225869312-euBT/' }] },
     ],
     milestones: [],
   },
@@ -207,7 +207,7 @@ export const workPackages = [
 
 // Shown on the timeline and as a small card; no page of their own.
 export const supportPackages = [
-  { n: 6, title: 'Training & Transfer of Knowledge', months: [1, 24], text: 'Teaching, mentoring, skills development, research integrity and open science.' },
+  { n: 6, title: 'Training & Transfer of Knowledge', months: [1, 24], text: 'T6.1 teaching, mentoring and collaboration · T6.2 skills development and knowledge update · T6.3 research integrity, open science and knowledge transfer.' },
   { n: 7, title: 'Project Management', months: [1, 24], text: 'Data management plan (DMP) and career development plan (CDP).' },
 ]
 
@@ -327,4 +327,26 @@ export const codeModules = [
   { wp: 1, folder: 'wp1-dao-collaboration', title: 'DAO workspace + L3 collaboration', tech: 'Solidity · Hardhat · Python', status: 'available', text: 'A DAO for twin teams (reputation voting, timelock, parallel tasks, experiments, reports) and the AEI 2025 cross-chain framework (validator-quorum gateway, shared dNFTs, HTLC swaps).' },
   { wp: 2, folder: 'wp2-big-data-flows', title: 'Big data flows', tech: 'Python · Solidity', status: 'available', text: 'Twin sensor-stream simulation, edge processing with anomaly detection, and Merkle batches anchored on-chain for tamper-evident data flows.' },
   { wp: 4, folder: 'wp4-trust-auditing', title: 'Trust & auditing', tech: 'Python · Solidity', status: 'available', text: 'Identity-based encryption with distributed key servers, self-judging data authentication with aggregated BLS signatures, and zero-knowledge proofs linking a twin NFT to its birth certificate, all verified on the EVM.' },
+]
+
+// Communication, outreach and knowledge transfer (WP5 · D5.7 and WP6 · T6.3).
+export const outreach = [
+  {
+    title: 'Digital twins explained in #askaneconomist',
+    type: 'Video interview',
+    channel: 'Faculty of Economics and Administration, MUNI · LinkedIn and Instagram',
+    date: 'August 2026',
+    text: 'A short video interview in the faculty series #askaneconomist on how digital twins work, how they differ from traditional simulations, and why IoT, AI and cloud computing are speeding up their adoption. Organisations can use them to detect problems earlier, plan maintenance, reduce downtime and test decisions before applying them in the real world.',
+    tags: ['D5.7', 'T6.3'],
+    links: [{ label: 'Watch on LinkedIn', url: 'https://www.linkedin.com/posts/askaneconomist-ugcPost-7494032637225869312-euBT/' }],
+  },
+  {
+    title: 'Digital Twins: Bridging the Physical and Digital Worlds',
+    type: 'Interview article',
+    channel: 'ECON MUNI news',
+    date: '17 April 2026',
+    text: 'An interview for the faculty website on digital twins as virtual models kept in sync with real systems through live sensor data. It covers the main obstacles (data management, protection of intellectual property, cost and coordination between stakeholders), how Web3 tools such as blockchain, decentralized storage, IP-NFTs and DAOs can address them, and the most promising application areas: smart manufacturing, healthcare, smart cities, energy and logistics.',
+    tags: ['D5.7', 'T6.3'],
+    links: [{ label: 'Read the interview', url: 'https://www.econ.muni.cz/en/news/digital-twins-bridging-the-physical-and-digital-worlds' }],
+  },
 ]

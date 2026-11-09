@@ -5,6 +5,7 @@ import WorkPackages from '../components/home/WorkPackages.jsx'
 import Timeline from '../components/home/Timeline.jsx'
 import SourceCode from '../components/home/SourceCode.jsx'
 import Publications from '../components/home/Publications.jsx'
+import Outreach from '../components/home/Outreach.jsx'
 import Team from '../components/home/Team.jsx'
 import Contact from '../components/home/Contact.jsx'
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Timeline />
       <SourceCode />
       <Publications />
+      <Outreach />
       <Team />
       <Contact />
     </>
