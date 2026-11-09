@@ -268,7 +268,7 @@ export const team = [
     ],
   },
   {
-    name: 'Prof. Ahad Zareravasan',
+    name: 'Dr. Ahad Zareravasan',
     role: 'Supervisor',
     affiliation: 'Department of Business Management, Masaryk University',
     interests: ['Business Analytics', 'Big Data', 'Blockchain', 'Information Systems'],
