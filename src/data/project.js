@@ -193,7 +193,7 @@ export const workPackages = [
       'Communication: social media, press releases, videos, open-day talks',
     ],
     deliverables: [
-      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: Advanced Engineering Informatics (2025), a Layer-3 framework for collaboration of digital twin teams on heterogeneous blockchains.', links: [{ label: 'Read the article', url: 'https://doi.org/10.1016/j.aei.2025.103616' }] },
+      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: 1 journal paper (Advanced Engineering Informatics, 2025) and 2 conference papers (IEEE BRAINS 2025; ITQM 2025, Procedia Computer Science).', links: [{ label: 'AEI 2025', url: 'https://doi.org/10.1016/j.aei.2025.103616' }, { label: 'BRAINS 2025', url: 'https://doi.org/10.1109/BRAINS67003.2025.11302931' }, { label: 'ITQM 2025', url: 'https://doi.org/10.1016/j.procs.2025.08.120' }] },
       { id: 'D5.2', title: 'Industry webinars', description: 'Online webinars for industrial partners (80–130 attendees).', status: 'planned' },
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
@@ -253,6 +253,38 @@ export const publications = [
       { value: '4', label: 'L3 mechanisms analysed in one generic framework' },
     ],
     keywords: ['Cross-chain', 'Interoperability', 'Layer 3', 'Metaverse', 'Scalability', 'Virtual lab'],
+  },
+  {
+    title: 'ChainFedTwin: A Blockchain-Based Federated Learning Framework for Secure, Explainable Digital-Twin Collaboration',
+    authors: 'Nasim Nezhadsistani, Kasra Sohrabati, Seyed Mojtaba Hosseini Bamakan, Burkhard Stiller',
+    venue: '7th Conference on Blockchain Research & Applications for Innovative Networks and Services (BRAINS 2025), IEEE',
+    year: '2025',
+    type: 'Conference paper',
+    doi: '10.1109/BRAINS67003.2025.11302931',
+    url: 'https://ieeexplore.ieee.org/document/11302931',
+    urlLabel: 'Read on IEEE Xplore',
+    wps: [2, 4],
+    abstract:
+      'ChainFedTwin is a seven-layer framework in which digital twins learn together through federated learning while a blockchain governs and audits every aggregation round. Smart contracts handle governance, cryptographic methods protect the shared updates, and an explainable-AI layer (SHAP and LIME) checks each aggregation step for bias. On the NSL-KDD dataset it outperforms the FedAvg baseline, at the cost of a moderate communication overhead for privacy and auditing.',
+    highlights: [
+      { value: '94.1%', label: 'test accuracy, against 91% for FedAvg' },
+      { value: '47%', label: 'fewer iterations to reach 90% accuracy' },
+      { value: '~15%', label: 'communication overhead for privacy and auditing' },
+    ],
+    keywords: ['Digital twin', 'Federated learning', 'Blockchain', 'Explainable AI', 'Privacy', 'Security'],
+  },
+  {
+    title: 'Enhancing Cyber-Physical-Social Systems through Decentralized Governance and Blockchain-based Digital Twins',
+    authors: 'Seyed Mojtaba Hosseini Bamakan, Farnaz Dehghan, Saeed Banaeian Far, Ahad Zareravasan',
+    venue: 'Procedia Computer Science, vol. 266, pp. 971–978 (12th International Conference on Information Technology and Quantitative Management, ITQM 2025)',
+    year: '2025',
+    type: 'Conference paper',
+    doi: '10.1016/j.procs.2025.08.120',
+    url: 'https://www.sciencedirect.com/science/article/pii/S1877050925024317',
+    wps: [1, 4],
+    abstract:
+      'Cyber-physical-social systems such as smart cities and industrial plants depend on digital twins, but centralized governance and opaque analytics limit their scalability and resilience. The paper proposes a governance framework that combines Decentralized Autonomous Organizations (DAOs) with blockchain-based predictive analytics, so that many stakeholders can share data and take decisions through smart contracts and community governance. Theoretical analysis and comparative evaluation show how the framework addresses security, algorithmic fairness and data integrity in CPSS governance.',
+    keywords: ['Cyber-physical-social systems', 'Digital twins', 'DAOs', 'Decentralized governance', 'Blockchain'],
   },
 ]
 
