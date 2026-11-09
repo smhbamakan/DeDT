@@ -193,7 +193,7 @@ export const workPackages = [
       'Communication: social media, press releases, videos, open-day talks',
     ],
     deliverables: [
-      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: 1 journal paper (Advanced Engineering Informatics, 2025) and 2 conference papers (IEEE BRAINS 2025; ITQM 2025, Procedia Computer Science).', links: [{ label: 'AEI 2025', url: 'https://doi.org/10.1016/j.aei.2025.103616' }, { label: 'BRAINS 2025', url: 'https://doi.org/10.1109/BRAINS67003.2025.11302931' }, { label: 'ITQM 2025', url: 'https://doi.org/10.1016/j.procs.2025.08.120' }] },
+      { id: 'D5.1', title: 'Research publications', description: '2 journal papers (JCR Q1) and 3 conference papers.', status: 'in-progress', summary: 'Published: 1 journal paper (Advanced Engineering Informatics, 2025) and 3 conference papers (IEEE BRAINS 2025; ITQM 2025 and ITQM 2026, Procedia Computer Science).', links: [{ label: 'AEI 2025', url: 'https://doi.org/10.1016/j.aei.2025.103616' }, { label: 'BRAINS 2025', url: 'https://doi.org/10.1109/BRAINS67003.2025.11302931' }, { label: 'ITQM 2025', url: 'https://doi.org/10.1016/j.procs.2025.08.120' }, { label: 'ITQM 2026', url: 'https://www.sciencedirect.com/science/article/pii/S1877050926027985' }] },
       { id: 'D5.2', title: 'Industry webinars', description: 'Online webinars for industrial partners (80–130 attendees).', status: 'planned' },
       { id: 'D5.3', title: 'Project website', description: 'This website, kept up to date throughout the project.', status: 'available' },
       { id: 'D5.4', title: 'Policy recommendations', description: 'Reports and meetings with government agencies.', status: 'planned' },
@@ -285,6 +285,18 @@ export const publications = [
     abstract:
       'Cyber-physical-social systems such as smart cities and industrial plants depend on digital twins, but centralized governance and opaque analytics limit their scalability and resilience. The paper proposes a governance framework that combines Decentralized Autonomous Organizations (DAOs) with blockchain-based predictive analytics, so that many stakeholders can share data and take decisions through smart contracts and community governance. Theoretical analysis and comparative evaluation show how the framework addresses security, algorithmic fairness and data integrity in CPSS governance.',
     keywords: ['Cyber-physical-social systems', 'Digital twins', 'DAOs', 'Decentralized governance', 'Blockchain'],
+  },
+  {
+    title: 'Unleashing Cognitive AI Through Neuromorphic Computing for Human-Like Intelligence',
+    authors: 'Seyed Mojtaba Hosseini Bamakan, Saeed Banaeian Far',
+    venue: 'Procedia Computer Science, vol. 287, pp. 1183–1190 (13th International Conference on Information Technology and Quantitative Management, ITQM 2026)',
+    year: '2026',
+    type: 'Conference paper',
+    url: 'https://www.sciencedirect.com/science/article/pii/S1877050926027985',
+    wps: [],
+    abstract:
+      'Conventional deep learning is reaching limits in energy use, latency and privacy, especially for AI that runs on devices at the edge. The paper argues for cognitive AI built on neuromorphic computing: spiking neural networks on hardware that merges memory and computation, able to learn online and adapt without large training datasets. Drawing on recent progress in memristive synapses and photonic interconnects, it outlines the device, synaptic and interconnect options for continual learning and proposes benchmarks for energy, latency and privacy. On-device learning of this kind is relevant to digital twins that must adapt at the edge.',
+    keywords: ['Cognitive AI', 'Neuromorphic computing', 'Spiking neural networks', 'On-device learning', 'Edge AI'],
   },
 ]
 
